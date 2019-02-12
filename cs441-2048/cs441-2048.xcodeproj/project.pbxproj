@@ -13,6 +13,8 @@
 		7FD734ED220BCADD00CE71BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD734EC220BCADD00CE71BD /* Assets.xcassets */; };
 		7FD734F0220BCADD00CE71BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD734EE220BCADD00CE71BD /* LaunchScreen.storyboard */; };
 		7FD734F3220BCADD00CE71BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD734F2220BCADD00CE71BD /* main.m */; };
+		7FD734FC2212846800CE71BD /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD734FA2212846800CE71BD /* GameViewController.m */; };
+		7FD734FD2212846800CE71BD /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FD734FB2212846800CE71BD /* GameViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		7FD734EF220BCADD00CE71BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FD734F1220BCADD00CE71BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FD734F2220BCADD00CE71BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7FD734F92212846800CE71BD /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		7FD734FA2212846800CE71BD /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		7FD734FB2212846800CE71BD /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,9 @@
 		7FD734E2220BCADB00CE71BD /* cs441-2048 */ = {
 			isa = PBXGroup;
 			children = (
+				7FD734F92212846800CE71BD /* GameViewController.h */,
+				7FD734FA2212846800CE71BD /* GameViewController.m */,
+				7FD734FB2212846800CE71BD /* GameViewController.xib */,
 				7FD734E3220BCADB00CE71BD /* AppDelegate.h */,
 				7FD734E4220BCADB00CE71BD /* AppDelegate.m */,
 				7FD734E6220BCADB00CE71BD /* ViewController.h */,
@@ -128,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD734FD2212846800CE71BD /* GameViewController.xib in Resources */,
 				7FD734F0220BCADD00CE71BD /* LaunchScreen.storyboard in Resources */,
 				7FD734ED220BCADD00CE71BD /* Assets.xcassets in Resources */,
 				7FD734EB220BCADB00CE71BD /* Main.storyboard in Resources */,
@@ -141,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD734FC2212846800CE71BD /* GameViewController.m in Sources */,
 				7FD734E8220BCADB00CE71BD /* ViewController.m in Sources */,
 				7FD734F3220BCADD00CE71BD /* main.m in Sources */,
 				7FD734E5220BCADB00CE71BD /* AppDelegate.m in Sources */,
