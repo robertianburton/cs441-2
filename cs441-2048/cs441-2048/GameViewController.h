@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GameViewController : UIViewController
 @property (nonatomic, strong) IBOutlet UILabel *statusLabel;
+@property UIGestureRecognizer;
 @end
 
 NS_ASSUME_NONNULL_END
