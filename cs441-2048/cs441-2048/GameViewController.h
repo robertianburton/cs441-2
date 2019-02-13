@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GameViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (nonatomic, strong) IBOutlet UILabel *statusLabel;
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeLeft;
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRight;

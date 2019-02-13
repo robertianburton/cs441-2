@@ -54,6 +54,7 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orb" translatesAutoresizingMaskIntoConstraints="NO" id="FtT-MQ-Brc">
                                 <rect key="frame" x="96.5" y="40" width="182" height="182"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="182" id="YBn-Re-k1F"/>
                                     <constraint firstAttribute="width" constant="182" id="oRM-2K-SZM"/>
@@ -239,6 +240,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9k-V8-A3u">
+                                <rect key="frame" x="127" y="101.5" width="121" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.6705882352941176" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -266,6 +273,7 @@
                             <constraint firstItem="e4z-Tk-q13" firstAttribute="top" secondItem="3fs-cj-0AY" secondAttribute="bottom" constant="102" id="Qpg-a6-YX7"/>
                             <constraint firstItem="3Fz-AM-tOH" firstAttribute="top" secondItem="bnH-Ai-cWr" secondAttribute="top" id="SnE-lC-uC1"/>
                             <constraint firstItem="FeD-s8-Lb9" firstAttribute="leading" secondItem="ejm-F4-15b" secondAttribute="trailing" constant="11" id="WOO-Ai-Fbe"/>
+                            <constraint firstItem="r9k-V8-A3u" firstAttribute="centerY" secondItem="FtT-MQ-Brc" secondAttribute="centerY" id="WfA-ms-Uxa"/>
                             <constraint firstItem="5Dm-pb-RY7" firstAttribute="centerY" secondItem="Ug0-Pt-6jC" secondAttribute="centerY" constant="275" id="WmT-oU-Np1"/>
                             <constraint firstItem="ZBW-mD-OxF" firstAttribute="top" secondItem="Qf9-bH-GTH" secondAttribute="bottom" constant="13" id="XNS-Ca-3mh"/>
                             <constraint firstItem="FtT-MQ-Brc" firstAttribute="centerX" secondItem="Ug0-Pt-6jC" secondAttribute="centerX" id="YJJ-PQ-SnB"/>
@@ -274,6 +282,7 @@
                             <constraint firstItem="DRj-Py-blR" firstAttribute="leading" secondItem="MkQ-rp-SB4" secondAttribute="trailing" constant="11" id="acX-nQ-15r"/>
                             <constraint firstItem="bnH-Ai-cWr" firstAttribute="top" secondItem="3fs-cj-0AY" secondAttribute="bottom" constant="188" id="aeY-Cf-ghp"/>
                             <constraint firstItem="6cJ-iD-g2y" firstAttribute="top" secondItem="3fs-cj-0AY" secondAttribute="bottom" constant="-75" id="bvP-Df-5Ao"/>
+                            <constraint firstItem="r9k-V8-A3u" firstAttribute="centerX" secondItem="FtT-MQ-Brc" secondAttribute="centerX" id="dYs-hC-Sfs"/>
                             <constraint firstItem="DRj-Py-blR" firstAttribute="top" secondItem="bnH-Ai-cWr" secondAttribute="top" id="eBF-ns-VTo"/>
                             <constraint firstItem="ovm-ka-L0N" firstAttribute="leading" secondItem="aXN-Ib-2Je" secondAttribute="trailing" constant="8" id="fH2-B7-NTZ"/>
                             <constraint firstItem="yX2-eC-Ga3" firstAttribute="top" secondItem="3fs-cj-0AY" secondAttribute="bottom" constant="-75" id="jbK-Ad-yOV"/>
@@ -298,6 +307,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="scoreLabel" destination="r9k-V8-A3u" id="m6a-jq-YeZ"/>
                         <outlet property="statusLabel" destination="5Dm-pb-RY7" id="rEl-6U-Rid"/>
                         <outlet property="swipeDown" destination="3gi-9h-cNl" id="fdP-xr-a8K"/>
                         <outlet property="swipeLeft" destination="Pji-0c-asi" id="0PX-If-bBh"/>
