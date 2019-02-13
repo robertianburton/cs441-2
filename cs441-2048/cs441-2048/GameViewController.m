@@ -8,12 +8,13 @@
 
 #import "GameViewController.h"
 
-@interface GameViewController ()
-
+@interface GameViewController () {
+    int grid[16];
+}
 @end
 
 @implementation GameViewController
-@synthesize statusLabel, swipeLeft, swipeRight, swipeUp, swipeDown;
+@synthesize statusLabel, swipeLeft, swipeRight, swipeUp, swipeDown, labels;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,21 +34,84 @@
     [self.view addGestureRecognizer:swipeDown];
     
     [statusLabel setText:@"Testing!"];
+    [self gameStart];
 }
 - (IBAction)swipeAction:(UISwipeGestureRecognizer *)sender {
     if (sender.direction == UISwipeGestureRecognizerDirectionLeft) {
         NSLog(@"Left Swipe");
+        [statusLabel setText:@"Left Swipe!"];
+        
     }
-    if (sender.direction == UISwipeGestureRecognizerDirectionRight) {
+    else if (sender.direction == UISwipeGestureRecognizerDirectionRight) {
         NSLog(@"Right Swipe");
+        [statusLabel setText:@"Right Swipe!"];
     }
-    if (sender.direction == UISwipeGestureRecognizerDirectionUp) {
+    else if (sender.direction == UISwipeGestureRecognizerDirectionUp) {
         NSLog(@"Up Swipe");
+        [statusLabel setText:@"Up Swipe!"];
     }
-    if (sender.direction == UISwipeGestureRecognizerDirectionDown) {
+    else if (sender.direction == UISwipeGestureRecognizerDirectionDown) {
         NSLog(@"Down Swipe");
+        [statusLabel setText:@"Down Swipe!"];
+        //[statusLabel setText:[labels[10] text]];
     }
-    [statusLabel setText:@"Swipe!"];
+}
+
+- (void)gameStart {
+    unsigned int i;
+    for(i = 0; i < 16; i++)
+    {
+        [labels[i] setText:@"0"];
+        grid[i] = 0;
+    }
+    
+    int r = arc4random_uniform(16);
+    grid[r] = 1;
+    
+    for(i = 0; i < 16; i++)
+    {
+        [labels[i] setText:[NSString stringWithFormat:@"%d", grid[i]]];
+    }
+}
+
+- (void)assesMove:(int) dir {
+    if(dir==0) {
+        
+    }
+    unsigned int i;
+    for(i = 0; i < 16; i++)
+    {
+        [labels[i] setText:[NSString stringWithFormat:@"%d", grid[i]]];
+    }
+}
+
+- (void)assesRow:(int[4]) set {
+    if(grid[set[0]]==grid[set[1]] && grid[set[0]]!=0 && grid[set[3]]!=0 && grid[set[4]]!=0 ) {
+        grid[set[0]] = grid[set[0]]*2;
+        grid[set[1]] = grid[set[2]];
+        grid[set[2]] = grid[set[3]];
+        grid[set[3]] = 0;
+        if(grid[set[1]]==grid[set[2]]) {
+            grid[set[1]]*=2;
+            grid[set[2]]=0;
+        }
+    } else if (grid[set[0]]==grid[set[1]] && grid[set[0]]!=0 && grid[set[2]]==0 && grid[set[3]]!=0 ) {
+        grid[set[0]] = grid[set[0]]*2;
+        grid[set[1]] = grid[set[3]];
+        grid[set[2]] = 0;
+        grid[set[3]] = 0;
+    } else if (grid[set[0]]==grid[set[1]] && grid[set[0]]!=0 && grid[set[3]]==0 && grid[set[2]]!=0 ) {
+        grid[set[0]] = grid[set[0]]*2;
+        grid[set[1]] = grid[set[2]];
+        grid[set[2]] = 0;
+        grid[set[3]] = 0;
+    } else if (grid[set[0]]==grid[set[1]] && grid[set[0]]!=0 && grid[set[2]]==0 && grid[set[3]]==0 ) {
+        grid[set[0]] = grid[set[0]]*2;
+        grid[set[1]] = 0;
+    } else if (grid[set[0]]==grid[set[1]] && grid[set[0]]!=0 && grid[set[2]]==0 && grid[set[3]]==0 ) {
+        grid[set[0]] = grid[set[0]]*2;
+        grid[set[1]] = 0;
+    }
 }
 
 /*
@@ -61,3 +125,4 @@
 */
 
 @end
+

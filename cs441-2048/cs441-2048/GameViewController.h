@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRight;
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeUp;
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeDown;
+@property (retain) IBOutletCollection(UILabel) NSArray *labels;
+
 @end
 
 NS_ASSUME_NONNULL_END
